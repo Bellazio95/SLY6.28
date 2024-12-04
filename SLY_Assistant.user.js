@@ -6,9 +6,9 @@
 // @author       SLY w/ Contributions by niofox, SkyLove512, anthonyra, [AEP] Valkynen, Risingson, Swift42
 // @match        https://*.based.staratlas.com/
 // @require      https://unpkg.com/@solana/web3.js@1.95.8/lib/index.iife.min.js
-// @require      https://raw.githubusercontent.com/ImGroovin/SAGE-Lab-Assistant/main/anchor-browserified.js
-// @require      https://raw.githubusercontent.com/ImGroovin/SAGE-Lab-Assistant/main/buffer-browserified.js
-// @require      https://raw.githubusercontent.com/ImGroovin/SAGE-Lab-Assistant/main/bs58-browserified.js
+// @require      https://raw.githubusercontent.com/Bellazio95/SLY6.15/main/anchor-browserified.js
+// @require      https://raw.githubusercontent.com/Bellazio95/SLY6.15/main/buffer-browserified.js
+// @require      https://raw.githubusercontent.com/Bellazio95/SLY6.15/main/bs58-browserified.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=staratlas.com
 // @grant        GM_setValue
 // @grant        GM_getValue
@@ -18,15 +18,13 @@
 (async function() {
     'use strict';
 
-    //Used for reading solana data
-    let customReadRPCs = [];
+//Used for reading solana data
+    let customReadRPCs = ['https://solana-mainnet.api.syndica.io/api-key/2foLkQm2Jv7GrX9UfdV5nfggoWCmCxAD4Tpf67oRr6kBCx1jxVbre4gJxRMeH1fDALNBntdBxiec5z2Bnud8hVvjWvLQU12SKZC',];
 
     //Used for pushing transactions to solana chain
-    let customWriteRPCs = [];
+    let customWriteRPCs = ['https://solana-mainnet.api.syndica.io/api-key/2foLkQm2Jv7GrX9UfdV5nfggoWCmCxAD4Tpf67oRr6kBCx1jxVbre4gJxRMeH1fDALNBntdBxiec5z2Bnud8hVvjWvLQU12SKZC',];
 
-    let saRPCs = [
-        'https://rpc.ironforge.network/mainnet?apiKey=01HZFVRZ4A5WVX2NDA4PCPHJ7N',
-    ];
+    let saRPCs = [];
     let readRPCs = customReadRPCs.concat(saRPCs);
     let writeRPCs = customWriteRPCs.concat(saRPCs);
 
